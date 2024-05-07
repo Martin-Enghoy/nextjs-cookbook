@@ -34,13 +34,13 @@ function ProjectItem({
   return (
     <li>
       <a href={url} target="_blank">
-        <div className="max-w-sm rounded overflow-hidden shadow-lg">
-          <Image className="w-1/2 mx-auto" src={image} alt={name} />
+        <div className="bg-neutral-100 max-w-sm rounded overflow-hidden shadow-lg">
+          <Image className="w-1/2 mx-auto my-4" src={image} alt={name} />
           <div className="px-6 py-4">
-            <div className="font-bold text-xl mb-2">{name}</div>
+            <div className="font-bold text-primary text-xl mb-2">{name}</div>
           </div>
           <div className="px-6 pb-4">
-            <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">
+            <span className="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-primary mr-2 mb-2">
               🔗{urlDisplay}
             </span>
           </div>
@@ -52,10 +52,10 @@ function ProjectItem({
 
 export default function Projects() {
   return (
-    <div className="mt-16 px-8">
+    <div className="text-dark-text pt-16 px-8">
       <header>
-        <h1 className="font-bold text-4xl text-zinc-800">Things I Do</h1>
-        <p className="text-base mt-6 text-zinc-600">
+        <h1 className="font-bold text-4xl ">Things I Do</h1>
+        <p className="text-base mt-6 ">
           I have been working on a number of small creative projects.
         </p>
       </header>

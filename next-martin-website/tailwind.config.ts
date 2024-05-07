@@ -8,18 +8,18 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
-    colors: {
-      "dark-bg": "#070A09",
-      primary: "#00B140",
-      "dark-secondary": "#18996C",
-      "dark-text": "#DBF2EA",
-      "dark-accent": "#29EFAD",
-    },
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      },
+      colors: {
+        "dark-bg": "#070A09",
+        primary: "#00B140",
+        "dark-secondary": "#18996C",
+        "dark-text": "#DBF2EA",
+        "dark-accent": "#29EFAD",
       },
     },
   },
