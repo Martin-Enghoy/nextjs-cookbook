@@ -7,6 +7,13 @@ export async function getStaticProps() {
   return {
     props: {
       pageId: "projects",
+      metadata: {
+        title: "Projects",
+        description: "Check out Martin's Projects on all things tech.",
+        openGraph: {
+          url: "https://example.com",
+        },
+      },
     },
   };
 }
@@ -54,7 +61,8 @@ export default function Projects() {
       </header>
       <div className="mt-16">
         <h2 className="text-2xl">Apps</h2>
-        <ul className="grid sm:grid-rows-2 md:grid-cols-4 gap-x-12 gap-y-16 mt-8">
+        {/* TODO: Add More Projects here. */}
+        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-x-12 gap-y-16 mt-8">
           <ProjectItem
             name={`Front-Q`}
             url={`https://front-q.com/`}

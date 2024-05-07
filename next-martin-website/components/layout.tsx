@@ -1,5 +1,7 @@
 import { cn } from "@/utils/util";
 
+import Head from "next/head";
+
 type NavItemProps = {
   title: string;
   url: string;
@@ -51,8 +53,23 @@ function Navbar({ pageId }: NavbarProps) {
 export default function Layout({ children }: any) {
   return (
     <>
+      <Head>
+        <link rel="icon" href="#" />
+        <title>{children.props.metadata.title}</title>
+        <meta
+          name="description"
+          content={children.props.metadata.description}
+        />
+        {/* OpenGraph Tags */}
+        <meta name="og:title" content={children.props.metadata.title} />
+        <meta
+          name="og:description"
+          content={children.props.metadata.description}
+        />
+        <meta name="og:url" content={children.props.metadata.openGraph.url} />
+      </Head>
       <Navbar pageId={children.props.pageId} />
-      <main>{children}</main>
+      <main className="">{children}</main>
     </>
   );
 }
