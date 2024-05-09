@@ -1,54 +1,11 @@
-import { cn } from "@/utils/util";
-
 import Head from "next/head";
+import { Navbar } from "./main-page/Navbar";
 
-type NavItemProps = {
-  title: string;
-  url: string;
-  isSelected: boolean;
-};
+import { Ubuntu_Mono } from "next/font/google";
+import { cn } from "@/utils/util";
+import { Header } from "./Header";
 
-type NavbarProps = {
-  pageId: string;
-};
-
-function NavItem({ title, url, isSelected }: NavItemProps) {
-  return (
-    <li className="px-3 py-2 transition hover:text-primary">
-      <a
-        href={url}
-        className={cn(
-          `block transition hover:text-primary` &&
-            (isSelected ? "text-primary" : "")
-        )}
-      >
-        {title}
-      </a>
-    </li>
-  );
-}
-
-function Navbar({ pageId }: NavbarProps) {
-  return (
-    <div className="w-full flex justify-center bg-dark-bg text-dark-text gap-4 h-16 pt-6">
-      <nav>
-        <ul className="flex rounded-full  px-3 gap-4 text-sm font-medium text-dark-text shadow-lg shadow-dark-text/10 ring-1 ring-dark-text/10 backdrop-blur">
-          <NavItem title="About Me" url="/" isSelected={pageId == "about_me"} />
-          <NavItem
-            title="Projects"
-            url="/projects"
-            isSelected={pageId == "projects"}
-          />
-          <NavItem
-            title="Essays"
-            url="/essays"
-            isSelected={pageId == "essays"}
-          />
-        </ul>
-      </nav>
-    </div>
-  );
-}
+const ubuntuMono = Ubuntu_Mono({ subsets: ["latin"], weight: ["400", "700"] });
 
 export default function Layout({ children }: any) {
   return (
@@ -68,8 +25,16 @@ export default function Layout({ children }: any) {
         />
         <meta name="og:url" content={children.props.metadata.openGraph.url} />
       </Head>
-      <Navbar pageId={children.props.pageId} />
-      <main className="min-h-screen bg-dark-bg text-dark-text">{children}</main>
+      <div
+        className={cn(
+          ubuntuMono.className,
+          "flex flex-row flex-wrap bg-dark-bg text-dark-text"
+        )}
+      >
+        <Header />
+        <Navbar pageId={children.props.pageId} />
+        <main className="min-h-screen w-2/3">{children}</main>
+      </div>
     </>
   );
 }
