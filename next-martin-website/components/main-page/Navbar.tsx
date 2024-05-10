@@ -11,9 +11,15 @@ import {
   scrollSpy,
 } from "react-scroll";
 
+type SubLink = {
+  subtitle: string;
+  sublink: string;
+};
+
 type NavItemProps = {
   title: string;
   url: string;
+  sublinks: SubLink[];
 };
 
 type NavbarProps = {
@@ -21,12 +27,29 @@ type NavbarProps = {
 };
 
 const urls: NavItemProps[] = [
-  { title: "Who are you?", url: "#who-are-you" },
-  { title: "Projects", url: "#projects-prev" },
-  { title: "Essays", url: "#essays-prev" },
+  { title: "Who are you?", url: "#who-are-you", sublinks: [] },
+  {
+    title: "Experience",
+    url: "#experience",
+    sublinks: [
+      { subtitle: "Front-Q", sublink: "#front-q" },
+      { subtitle: "IECEP Journal", sublink: "#iecep-journal" },
+    ],
+  },
+  { title: "Projects", url: "#projects-prev", sublinks: [] },
+  { title: "Write-ups", url: "#writeups-prev", sublinks: [] },
+  {
+    title: "Communities",
+    url: "#essays-prev",
+    sublinks: [
+      { subtitle: "freeCodeCamp", sublink: "#freecodecamp" },
+      { subtitle: "PirateSoftware", sublink: "#piratesoftware" },
+      { subtitle: "TheTheo", sublink: "#theo" },
+    ],
+  },
 ];
 
-function NavItem({ title, url }: NavItemProps) {
+function NavItem({ title, url, sublinks }: NavItemProps) {
   return (
     <li className="text-xl">
       <Link
@@ -41,6 +64,26 @@ function NavItem({ title, url }: NavItemProps) {
       >
         {title}
       </Link>
+      {sublinks.length > 0 ? (
+        <ul className="my-2">
+          {sublinks.map((sublink, idx) => (
+            <li key={idx} className="indent-8 text-xl my-2">
+              <Link
+                to={sublink.sublink}
+                spy={true}
+                smooth
+                offset={-200}
+                duration={500}
+                className={cn(
+                  `block transition duration-300 hover:text-primary cursor-pointer`
+                )}
+              >
+                {sublink.subtitle}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      ) : null}
     </li>
   );
 }
@@ -51,7 +94,12 @@ export function Navbar({ pageId }: NavbarProps) {
       <nav>
         <ul className="flex flex-col gap-2 text-sm font-medium text-dark-text">
           {urls.map((item, idx) => (
-            <NavItem key={idx} title={item.title} url={item.url} />
+            <NavItem
+              key={idx}
+              title={item.title}
+              url={item.url}
+              sublinks={item.sublinks}
+            />
           ))}
         </ul>
       </nav>

@@ -35,6 +35,30 @@ export default function Home() {
         </p>
         {/* </div> */}
       </Element>
+      <Element
+        name="#experience"
+        className="w-[40rem] my-16 px-4 py-4 h-auto border-4 border-primary rounded-lg"
+      >
+        <h1 className="text-2xl font-bold text-center">
+          How has my Professional Journey been?
+        </h1>
+        <hr className="w-2/3 mx-auto border my-4" />
+        <p className="text-lg text-justify">
+          {`Well, as of May 11, 2024, I am currently working on two (2) freelance projects that both have their uniqueness in function.
+          The first one that I got back in April 2023 is Front-Q. The second one I got back in August 2023 is IECEP Journal.
+          I can't be more thankful enough that I already have some form of work right now as a start, especially as I push further
+          to find my first full-time position.
+          `}
+        </p>
+        <Element name="#front-q">
+          <div className="my-8">
+            <hr />
+            <h1 className="my-4 text-center font-semibold text-xl">Front-Q</h1>
+            <hr className="mb-4" />
+            <p className="text-lg text-justify">{``}</p>
+          </div>
+        </Element>
+      </Element>
     </div>
   );
 }
