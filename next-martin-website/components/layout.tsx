@@ -12,18 +12,12 @@ export default function Layout({ children }: any) {
     <>
       <Head>
         <link rel="icon" href="#" />
-        <title>{children.props.metadata.title}</title>
-        <meta
-          name="description"
-          content={children.props.metadata.description}
-        />
+        <title>{children.metadata.title}</title>
+        <meta name="description" content={children.metadata.description} />
         {/* OpenGraph Tags */}
-        <meta name="og:title" content={children.props.metadata.title} />
-        <meta
-          name="og:description"
-          content={children.props.metadata.description}
-        />
-        <meta name="og:url" content={children.props.metadata.openGraph.url} />
+        <meta name="og:title" content={children.metadata.title} />
+        <meta name="og:description" content={children.metadata.description} />
+        <meta name="og:url" content={children.metadata.openGraph.url} />
       </Head>
       <div
         className={cn(
@@ -32,7 +26,7 @@ export default function Layout({ children }: any) {
         )}
       >
         <Header />
-        <Navbar pageId={children.props.pageId} />
+        <Navbar pageId={children.pageId} />
         <main className="min-h-screen w-2/3">{children}</main>
       </div>
     </>

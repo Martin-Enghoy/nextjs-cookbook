@@ -2,21 +2,30 @@ import Image, { StaticImageData } from "next/image";
 
 // Static Image URLs
 import imageFrontQ_2 from "../public/images/FrontQ_2.png";
+import { Metadata } from "next";
 
-export async function getStaticProps() {
-  return {
-    props: {
-      pageId: "projects",
-      metadata: {
-        title: "Projects",
-        description: "Check out Martin's Projects on all things tech.",
-        openGraph: {
-          url: "https://example.com",
-        },
-      },
-    },
-  };
-}
+// export async function getStaticProps() {
+//   return {
+//     props: {
+//       pageId: "projects",
+//       metadata: {
+//         title: "Projects",
+//         description: "Check out Martin's Projects on all things tech.",
+//         openGraph: {
+//           url: "https://example.com",
+//         },
+//       },
+//     },
+//   };
+// }
+
+export const metadata: Metadata = {
+  title: "Projects",
+  description: "Check out Martin's Projects on all things tech.",
+  openGraph: {
+    url: "https://example.com",
+  },
+};
 
 type ProjectItemProps = {
   name: string;
