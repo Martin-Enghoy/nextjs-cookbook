@@ -36,13 +36,17 @@ const urls: NavItemProps[] = [
   },
   { title: "Projects", url: "#projects-prev", sublinks: [] },
   { title: "Write-ups", url: "#writeups-prev", sublinks: [] },
+  { title: "Tech Stacks", url: "#tech-stacks", sublinks: [] },
   {
-    title: "Communities",
+    title: "Communities & Influences",
     url: "#essays-prev",
     sublinks: [
       { subtitle: "freeCodeCamp", sublink: "#freecodecamp" },
       { subtitle: "PirateSoftware", sublink: "#piratesoftware" },
       { subtitle: "TheTheo", sublink: "#theo" },
+      { subtitle: "ThePrimeagen", sublink: "#theprimeagen" },
+      { subtitle: "CodingInPublic", sublink: "#coding-in-public" },
+      { subtitle: "Coding With Antonio", sublink: "#coding-with-antonio" },
     ],
   },
 ];
