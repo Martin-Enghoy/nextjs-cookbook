@@ -108,7 +108,8 @@ export default function Home() {
           <hr className="w-2/3 mx-auto border my-4 mb-8" />
           <p className="text-lg text-justify">
             {`In my life, I have gone from community to community, listened to people's lives and molded my life according to
-            their advice.`}
+            their advice.`}{" "}
+            {``}
           </p>
           <Element name="#freecodecamp" className="py-16">
             <div>
