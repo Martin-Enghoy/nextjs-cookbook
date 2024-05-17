@@ -39,7 +39,7 @@ const urls: NavItemProps[] = [
   { title: "Tech Stacks", url: "#tech-stacks", sublinks: [] },
   {
     title: "Communities & Influences",
-    url: "#essays-prev",
+    url: "#communities",
     sublinks: [
       { subtitle: "freeCodeCamp", sublink: "#freecodecamp" },
       { subtitle: "PirateSoftware", sublink: "#piratesoftware" },
@@ -47,13 +47,17 @@ const urls: NavItemProps[] = [
       { subtitle: "ThePrimeagen", sublink: "#theprimeagen" },
       { subtitle: "CodingInPublic", sublink: "#coding-in-public" },
       { subtitle: "Coding With Antonio", sublink: "#coding-with-antonio" },
+      {
+        subtitle: "Student Lasallian Animators",
+        sublink: "#student-lasallian-animators",
+      },
     ],
   },
 ];
 
 function NavItem({ title, url, sublinks }: NavItemProps) {
   return (
-    <li className="text-xl">
+    <li className="text-lg">
       <Link
         to={url}
         spy={true}
@@ -69,7 +73,7 @@ function NavItem({ title, url, sublinks }: NavItemProps) {
       {sublinks.length > 0 ? (
         <ul className="my-2">
           {sublinks.map((sublink, idx) => (
-            <li key={idx} className="indent-8 text-xl my-2">
+            <li key={idx} className="indent-8 text-lg my-2">
               <Link
                 to={sublink.sublink}
                 spy={true}
@@ -92,7 +96,7 @@ function NavItem({ title, url, sublinks }: NavItemProps) {
 
 export function Navbar() {
   return (
-    <div className="sticky top-24 left-0 w-1/3 px-16 flex justify-start bg-dark-bg text-dark-text gap-4 h-16">
+    <div className="sticky top-20 left-0 w-1/3 px-16 flex justify-start bg-dark-bg text-dark-text gap-4 h-16">
       <nav>
         <ul className="flex flex-col gap-2 text-sm font-medium text-dark-text">
           {urls.map((item, idx) => (
