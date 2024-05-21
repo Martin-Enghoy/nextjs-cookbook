@@ -63,10 +63,21 @@ export default function Home() {
                 </Link>
               </h1>
               <hr className="mb-8" />
-              <p className="text-lg text-justify">
+              <p className="text-lg text-justify mb-4">
                 {`Front-Q is my first freelance project that I worked on back in April 2023.
-                The purpose of the web app focused around minimizing the the time it takes for 
-                the service crew to respond to a customer's request, be it in a hotel, b&b or food establishment.`}
+                The purpose of the web app is to be a Software-as-a-Service (SaaS) that focuses around minimizing the time it takes for 
+                the service crew to respond to a customer's request, be it in a hotel, b&b or food establishment.`}{" "}
+              </p>
+              <p className="text-lg text-justify mb-4">
+                {`Given Front-Q's main purpose, its core functions revolve around having a real-time view and management of requests
+                that each table / room sends to the service crew. In the management part of the requests, the service crew are able to exchange
+                messages with the customers at the table / room via a real-time chat window redirected from a request card getting clicked.`}
+              </p>
+              <p className="text-lg text-justify">
+                {`The main tech stack that this app uses is the Next.js 13.5 stack that utilizes the /app router. Mainly in TypeScript, styled using TailwindCSS, also utilizing shadcn-ui 
+                for some of its UI components. Its backend is mainly comprised of NoSQL with MongoDB as the third-party database and Prisma for modelling the data.
+                The app also utilized Axios for its API calls, as well as Pusher for its real-time functionality that fits well in refreshing the virtual DOM in React to fully simulate
+                the real-time functionalities.`}
               </p>
             </div>
           </Element>
@@ -84,10 +95,20 @@ export default function Home() {
                 </Link>
               </h1>
               <hr className="mb-8" />
-              <p className="text-lg text-justify">
+              <p className="text-lg text-justify mb-4">
                 {`Similar to Front-Q, IECEP Journal was one of my first freelance projects I had the chance to work on while
                 I worked on finishing my degree. The Institution of Electronics Engineering of the Philippines, IECEP for short,
-                is an organization that represents professionals in Electronics Engineering and its allied fields.
+                is an organization that represents professionals in Electronics Engineering and its allied fields. The main purpose of the web application
+                is to be able to publish research journals that comprised mainly papers that were submitted and reviewed within the website itself. 
+                That and also digitizing the traditional review process of papers that ran through email threads for years. 
+                `}
+              </p>
+              <p className="text-lg text-justify">
+                {`Likewise, IECEP Journal's tech stack comprised of the Next.js 13.5 stack with MongoDB as its backend. Compared to Front-Q that mainly required
+                more real-time functionalities, IECEP Journal's main requirement was its digitization of the traditional review process. Pages upon pages of different
+                roles within an Editorial Board. From the editorial chief, their secretary, the associate editors, down to the reviewers and authors, each had a different
+                set of data tables and data inputs. All of this along with having an email bot attached to each API success call to confirm each of the website users' actions.
+                I mainly used react-email and Resend to develop this email bot.
                 `}
               </p>
             </div>
