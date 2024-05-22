@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <main className="flex flex-row">
       <Navbar />
-      <div className="h-[200rem]">
+      <div className="min-h-[200rem] mb-[40rem]">
         {/* Who Are You? */}
         <Element
           name="#who-are-you"
