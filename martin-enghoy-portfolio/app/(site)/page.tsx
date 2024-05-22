@@ -148,7 +148,7 @@ export default function Home() {
               <hr className="mb-8" />
               <p className="text-lg text-justify">
                 {`Once I realized the career path I wanted to mainly take, freeCodeCamp is the first community
-                that I found and had falled in love fully.`}
+                that I found and had fell in love fully.`}
               </p>
             </div>
           </Element>
