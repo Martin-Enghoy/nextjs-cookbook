@@ -62,7 +62,7 @@ function NavItem({ title, url, sublinks }: NavItemProps) {
         to={url}
         spy={true}
         smooth
-        offset={-200}
+        offset={-100}
         duration={500}
         className={cn(
           `block transition duration-300 hover:text-primary cursor-pointer`
@@ -78,7 +78,7 @@ function NavItem({ title, url, sublinks }: NavItemProps) {
                 to={sublink.sublink}
                 spy={true}
                 smooth
-                offset={-200}
+                offset={-100}
                 duration={500}
                 className={cn(
                   `block transition duration-300 hover:text-primary cursor-pointer`
