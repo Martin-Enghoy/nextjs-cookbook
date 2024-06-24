@@ -1,7 +1,7 @@
 import Image, { StaticImageData } from "next/image";
 
 // Static Image URLs
-import imageFrontQ_2 from "../public/images/FrontQ_2.png";
+// import FrontQ_2 from "../public/images/FrontQ_2.png"
 import { Metadata } from "next";
 
 // export async function getStaticProps() {
@@ -31,7 +31,7 @@ type ProjectItemProps = {
   name: string;
   url: string;
   urlDisplay: string;
-  imageSrc: StaticImageData;
+  imageSrc: string;
 };
 
 function ProjectItem({
@@ -76,7 +76,7 @@ export default function Projects() {
             name={`Front-Q`}
             url={`https://front-q.com/`}
             urlDisplay={`front-q.com`}
-            imageSrc={imageFrontQ_2}
+            imageSrc={"../public/images/FrontQ_2.png"}
           />
         </ul>
       </div>
